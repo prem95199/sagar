@@ -4,7 +4,7 @@
 
     if($conn)
     {
-       // echo "connected ok";
+        echo "connected ok";
     }
     else
     {
