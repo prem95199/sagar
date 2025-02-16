@@ -1,13 +1,17 @@
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     background-image: url("");
-    background-size: 92%;
-    
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
 }
+
+/* HEADER */
 .header {
     display: flex;
     justify-content: space-between;
@@ -62,69 +66,85 @@ body{
     width: 100%;
 }
 
+/* RESPONSIVE NAVBAR */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
 
+    .nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* FEATURE SECTION */
 #feature {
-	width: 100%;
-	padding: 70px 0;
-  }
-  
-  .title-text {
-	text-align: center;
-	padding-bottom: 20px;
-  }
-  
-  .title-text p {
-	margin: auto;
-	font-size: 20px;
-	color: #009688;
-	font-weight: bold;
-	position: relative;
-	z-index: 1;
-	display: inline-block;
-  }
-  
-  .title-text p::after {
-	content: '';
-	width: 50px;
-	height: 35px;
-	background: linear-gradient(#019587, #fff);
-	position: absolute;
-	top: -20px;
-	left: 0;
-	z-index: -1;
-	transform: rotate(10deg);
-	border-top-left-radius: 35px;
-	border-bottom-right-radius: 35px;
-  }
-  
-  .title-text h1 {
-	font-size: 50px;
-  }
-  
-  .feature-box {
-	width: 80%;
-	margin: auto;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	text-align: center;
-  }
-  
-  .features {
-	flex-basis: 50%;
-  }
-  
-  .features-img {
-	flex-basis: 50%;
-	margin: auto;
-  }
-  
-  .features-img img {
-	width: 70%;
-	border-radius: 10px;
-  }
-  
-  .features-desc {
+    width: 100%;
+    padding: 70px 0;
+}
+
+.title-text {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.title-text p {
+    margin: auto;
+    font-size: 20px;
+    color: #009688;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+.title-text p::after {
+    content: '';
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#019587, #fff);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.title-text h1 {
+    font-size: 50px;
+}
+
+.feature-box {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.features {
+    flex-basis: 50%;
+}
+
+.features-img {
+    flex-basis: 50%;
+    margin: auto;
+}
+
+.features-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+.features-desc {
 	display: flex;
 	align-items: center;
 	margin-bottom: 40px;
@@ -152,9 +172,36 @@ body{
 	color: #555;
   }
 
-/* services */
 
+/* RESPONSIVE FEATURES */
+@media (max-width: 768px) {
+    .feature-box {
+        flex-direction: column;
+    }
 
+    .features {
+        flex-basis: 100%;
+    }
+
+    .features-img {
+        flex-basis: 100%;
+    }
+
+    .features-img img {
+        width: 80%;
+    }
+}
+
+/* IMAGE RESPONSIVENESS */
+.responsive-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* SERVICES */
 #service {
     width: 100%;
     padding: 70px 0;
@@ -172,7 +219,6 @@ body{
 
 .single-service {
     flex-basis: 32%;
-    text-align:"";
     border-radius: 7px;
     color: #fff;
     position: relative;
@@ -228,6 +274,7 @@ hr {
     opacity: 1;
 }
 
+/* RESPONSIVE SERVICES */
 @media screen and (max-width: 770px) {
     .service-box {
         flex-wrap: wrap;
@@ -244,9 +291,7 @@ hr {
     }
 }
 
-/* General Styles */
-
-/* General Styles for Voting Guide Section */
+/* VOTING GUIDE */
 #voting_Guide {
     width: 100%;
     padding: 50px 20px;
@@ -270,7 +315,7 @@ hr {
     color: #222;
 }
 
-/* FAQs Section */
+/* FAQs */
 #faqs h3 {
     font-size: 24px;
     color: #009688;
@@ -292,33 +337,15 @@ hr {
     color: #222;
 }
 
-  
-h1{
+/* TEXT CENTERING */
+h1 {
     text-align: center;
     color: red;
-    
 }
 
-.n1{
-    font-size: 25px;
-    margin-left: 1000px;
-    color: black;
-    width: 80px;
-    
-}
-
-.n2{
-    font-size: 25px;
-    margin-left: 1050px;
-    color: black;
-    width: 80px;
-    color: aqua;
-}
-
-.n3{
-    font-size: 25px;
-    margin-left: 1100px;
-    color: black;
-    width: 80px;
-    color: palevioletred;
+/* RESPONSIVE TEXT */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
 }
